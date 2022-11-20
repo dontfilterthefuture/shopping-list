@@ -15,8 +15,7 @@ function createListElement(){
     li.classList.add('todo-item');
     input.value = ""; 
     let button = document.createElement("button");
-    button.classList.add('btn');
-    button.classList.add('del');
+    button.classList.add('btn', 'del');
     button.innerHTML = "Done!";
     li.appendChild(button);
 }
@@ -48,7 +47,7 @@ function itemDone(event){
   todoItem.classList.toggle('done');
  } 
   else if (todoItem.classList.contains('del')){
-    todoItem.parentNode.remove(todoItem);
+    todoItem.parentNode.remove();
   }
 }
 
